@@ -23,7 +23,7 @@ class JobCopyEditDelete():
         self.driver.find_element(By.XPATH, Job_Form_Locators.job_item_override_id).send_keys(Keys.ENTER, Keys.ARROW_UP, Keys.ENTER)
         self.driver.find_element(By.XPATH, Job_Form_Locators.job_item_override_textbox_id).send_keys("5000")
         self.driver.find_element(By.XPATH, Job_Form_Locators.job_item_save_button_id).click()
-        time.sleep(5)
+        time.sleep(7)
         self.driver.find_element(By.XPATH, Job_Form_Locators.job_item_All_select_id).click()
         self.driver.find_element(By.XPATH, Job_Form_Locators.job_from_3dot_options_id).click()
         self.driver.find_element(By.XPATH, Job_Form_Locators.Job_from_3dot_copy_id).click()

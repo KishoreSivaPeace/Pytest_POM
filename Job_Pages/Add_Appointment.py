@@ -15,6 +15,7 @@ class AddAppointment():
         self.driver.find_element(By.XPATH, Job_Form_Locators.add_appointment_id).click()
         time.sleep(8)
         self.driver.find_element(By.XPATH, Job_Form_Locators.allday_id).click()
+        self.driver.find_element(By.XPATH, Job_Form_Locators.allday_id).click()
         self.driver.find_element(By.XPATH, Job_Form_Locators.appointment_type_id).click()
         self.driver.find_element(By.XPATH, Job_Form_Locators.appointment_type_name_id).click()
         self.driver.find_element(By.XPATH, Job_Form_Locators.staff_id).click()

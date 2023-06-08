@@ -8,6 +8,6 @@ class LogOut():
         self.driver = driver
 
     def logout(self):
-        time.sleep(3)
+        time.sleep(5)
         self.driver.find_element(By.XPATH, Login_out_Locators.profile_dropdown_id).click()
         self.driver.find_element(By.XPATH, Login_out_Locators.logout_id).click()
