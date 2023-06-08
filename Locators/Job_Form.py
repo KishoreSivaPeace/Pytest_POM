@@ -38,7 +38,7 @@ class Job_Form_Locators():
     appointment_description_id = "//*[@id='jobDescription']"
     appointment_save_button_id = "//*[@id='schedule_dialog_wrapper']/div[3]/button[2]"
 
-     # Add Task ID's
+    # Add Task ID's
     task_tab_id = "//*[@id='datessection']/mat-tab-header/div[2]/div/div/div[3]"
     add_task_id = "//*[@id='datessection']/div/mat-tab-body[3]/div/div/div/button"
     task_time_id = "(//*[text()='Add Task'])[2]/following::input[2]"
