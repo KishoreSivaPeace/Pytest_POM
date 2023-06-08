@@ -23,18 +23,18 @@ class LoginTest(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls) -> None:
-        cls.options = webdriver.EdgeOptions()
-        cls.options.add_experimental_option("detach", True)
-        cls.driver = webdriver.Edge(options=cls.options, service=EdgeService(EdgeChromiumDriverManager().install()))
-        cls.driver.maximize_window()
-        cls.driver.implicitly_wait(10)
-        # cls.options = webdriver.ChromeOptions()
+        # cls.options = webdriver.EdgeOptions()
         # cls.options.add_experimental_option("detach", True)
-        # cls.prefs = {"profile.default_content_setting_values.notifications": 2}
-        # cls.options.add_experimental_option("prefs", cls.prefs)
-        # cls.driver = webdriver.Chrome(options=cls.options, service=ChromeService(ChromeDriverManager().install()))
+        # cls.driver = webdriver.Edge(options=cls.options, service=EdgeService(EdgeChromiumDriverManager().install()))
         # cls.driver.maximize_window()
         # cls.driver.implicitly_wait(10)
+        cls.options = webdriver.ChromeOptions()
+        cls.options.add_experimental_option("detach", True)
+        cls.prefs = {"profile.default_content_setting_values.notifications": 2}
+        cls.options.add_experimental_option("prefs", cls.prefs)
+        cls.driver = webdriver.Chrome(options=cls.options, service=ChromeService(ChromeDriverManager().install()))
+        cls.driver.maximize_window()
+        cls.driver.implicitly_wait(10)
 
     def test_01_login(self):
         driver = self.driver
