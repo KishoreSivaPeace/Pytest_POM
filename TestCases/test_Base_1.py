@@ -1,3 +1,6 @@
+import allure
+import pytest
+from allure_commons.types import AttachmentType
 from selenium import webdriver
 from selenium.webdriver.edge.service import Service as EdgeService
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
@@ -40,6 +43,7 @@ class LoginTest(unittest.TestCase):
         driver = self.driver
         driver.get(Login_out_Locators.final_testing)
         LoginPage(driver).login_module()
+
 
     def test_02_add_job(self):
         driver = self.driver

@@ -21,6 +21,7 @@ driver = webdriver.Chrome(executable_path=ChromeDriverManager().install(), optio
 driver.maximize_window()
 driver.implicitly_wait(10)
 
+
 # login
 # driver.get("https://curtainmatrix.co.uk/finaltesting")
 # driver.find_element(By.XPATH, "//*[@id='companyname']").send_keys("KISHORESIVADB")

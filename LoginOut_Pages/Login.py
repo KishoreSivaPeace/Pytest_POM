@@ -1,5 +1,17 @@
+import allure
+import pytest
+from allure_commons.types import AttachmentType
 from selenium.webdriver.common.by import By
 from Locators.Login_Logout import Login_out_Locators
+
+
+# @pytest.fixture()
+# def error_screenshot(request, chrome_driver):
+#     yield
+#     item = request.node
+#     driver = chrome_driver
+#     if item.rep_call.failed:
+#         allure.attach(driver.get_screenshot_as_png(), name="dologin", attachment_type=AttachmentType.PNG)
 
 
 class LoginPage():
@@ -22,11 +34,15 @@ class LoginPage():
     # def click_login(self):
     #     self.driver.find_element(By.XPATH, self.login_button_id).click()
 
+    # @pytest.mark.usefixtures("error_screenshot")
     def login_module(self):
-        self.driver.find_element(By.XPATH, Login_out_Locators.company_name_id).send_keys(Login_out_Locators.company_name)
-        self.driver.find_element(By.CSS_SELECTOR, Login_out_Locators.user_name_id).send_keys(Login_out_Locators.user_name)
+        self.driver.find_element(By.XPATH, Login_out_Locators.company_name_id).send_keys(
+            Login_out_Locators.company_name)
+        self.driver.find_element(By.CSS_SELECTOR, Login_out_Locators.user_name_id).send_keys(
+            Login_out_Locators.user_name)
         self.driver.find_element(By.CSS_SELECTOR, Login_out_Locators.password_id).send_keys(Login_out_Locators.password)
         self.driver.find_element(By.XPATH, Login_out_Locators.login_button_id).click()
+        allure.attach(self.driver.get_screenshot_as_png(),name="Error", attachment_type=AttachmentType.PNG)
 
     # def login_module(self, companyname,username,password):
     #     self.driver.find_element(By.XPATH, self.company_name_id).send_keys(companyname)
