@@ -1,4 +1,5 @@
 import time
+from datetime import datetime
 
 import pyautogui
 from selenium.webdriver import ActionChains
@@ -38,7 +39,7 @@ driver.implicitly_wait(10)
 # driver.find_element(By.XPATH, "//*[text()='Additional Ref']/following::input[1]").send_keys("Automation Testing")
 # driver.find_element(By.XPATH,"/html/body/app-root/main/section/app-job/div[11]/div/div[1]/div[2]/div[2]/button[1]").click()
 
-#Add Job Item
+# Add Job Item
 # time.sleep(5)
 # action = ActionChains(driver)
 # action.move_to_element(driver.find_element(By.XPATH, "//*[@id='dropdownMenuLink']")).perform()
@@ -114,6 +115,9 @@ driver.implicitly_wait(10)
 # driver.find_element(By.XPATH, "//*[@id='jobproduct_grid']/div/div[2]/div[2]/div[3]/div[3]/div[1]/div[1]/app-moreoptionsrender/div/button/i").click()
 # driver.find_element(By.XPATH, "//*[@id='jobproduct_grid']/div/div[2]/div[2]/div[3]/div[3]/div[1]/div[1]/app-moreoptionsrender/div/div/a[1]").click()
 # time.sleep(10)
+# current_date = datetime.now()
+# date_string = current_date.strftime('%d-%m-%Y')
+# driver.find_element(By.XPATH, "//*[@id='collapseOne']/div/form/div/div[4]/igx-date-picker/igx-input-group/div[1]/div/input").send_keys(date_string)
 # driver.find_element(By.XPATH, "(//*[text()='Cost Price'])[2]/following::div[2]").click()
 # pyautogui.press('tab')
 # pyautogui.press('backspace')
@@ -223,3 +227,87 @@ driver.implicitly_wait(10)
 # driver.switch_to.window(next_window_handle)
 # time.sleep(5)
 # driver.find_element(By.XPATH, "(//*[text()='Phone'])[3]/following::input[1]").send_keys("123456789")
+
+
+# CreatedDate = driver.find_element(By.XPATH, "(//*[@id='jobinput']/igx-input-group/div[1]/div/input)[1]").get_attribute("value")
+# OrderDate = driver.find_element(By.XPATH, "(//*[@id='jobinput']/igx-input-group/div[1]/div/input)[2]").get_attribute("value")
+# DueDate = driver.find_element(By.XPATH, "(//*[@id='jobinput']/igx-input-group/div[1]/div/input)[3]").get_attribute("value")
+# InvoiceDate = driver.find_element(By.XPATH, "(//*[@id='jobinput']/igx-input-group/div[1]/div/input)[4]").get_attribute("value")
+# CompletedDate = driver.find_element(By.XPATH, "(//*[@id='jobinput']/igx-input-group/div[1]/div/input)[5]").get_attribute("value")
+# print("Created Date :", CreatedDate)
+# print("Order Date :", OrderDate)
+# print("Due Date :", DueDate)
+# print("Invoice Date :", InvoiceDate)
+# print("Completed Date :", CompletedDate)
+#
+# JobRefNo = driver.find_element(By.XPATH,  "/html/body/app-root/main/section/app-job/div[11]/div/div[1]/div[1]/form/div/div[3]/div/div[2]/div/input").get_attribute("value")
+# InvoiceNo = driver.find_element(By.XPATH, "/html/body/app-root/main/section/app-job/div[11]/div/div[1]/div[1]/form/div/div[6]/div/div[2]/div/input").get_attribute("value")
+# TotalCostPrice = driver.find_element(By.XPATH, "(//*[@id='pricedet']/div/mat-tab-body[1]/div/form/div/div/div[1]/div[3])[1]/input").get_attribute("value")
+# print("Job Ref No :", JobRefNo)
+# print("Invoice No :", InvoiceNo)
+# print("Total Cost Price", TotalCostPrice)
+#
+# dropdown = driver.find_element(By.XPATH, "(//*[text()='Job Status'])[3]/following::select[1]")
+# select = Select(dropdown)
+# JobStatus = select.first_selected_option
+# print("Job Status :", JobStatus.text)
+#
+# dropdown = driver.find_element(By.XPATH, "(//*[text()='Order Status'])[3]/following::select[1]")
+# select1 = Select(dropdown)
+# OrderStatus = select1.first_selected_option
+# print("Order Status :", OrderStatus.text)
+#
+# CreatedDate_OI = driver.find_element(By.XPATH, "//*[@id='collapseOne']/div/form/div/div[2]/igx-date-picker/igx-input-group/div[1]/div/input").get_attribute("value")
+# ProductionDate_OI = driver.find_element(By.XPATH, "//*[@id='collapseOne']/div/form/div/div[4]/igx-date-picker/igx-input-group/div[1]/div/input").get_attribute("value")
+# CostPrice_OI = driver.find_element(By.XPATH, "//*[@id='collapseTwo']/div/form/div/div[3]/input[1]").get_attribute("value")
+# OverridePrice_OI = driver.find_element(By.XPATH, "//*[@id='collapseTwo']/div/form/div/div[5]/input[1]").get_attribute("value")
+# NetPrice_OI = driver.find_element(By.XPATH, "//*[@id='collapseTwo']/div/form/div/div[7]/input[1]").get_attribute("value")
+# VAT_OI = driver.find_element(By.XPATH, "//*[@id='collapseTwo']/div/form/div/div[9]/input[1]").get_attribute("value")
+# GrossPrice_OI = driver.find_element(By.XPATH, "//*[@id='collapseTwo']/div/form/div/div[11]/input[1]").get_attribute("value")
+# print("Order Item Created Date :", CreatedDate_OI)
+# print("Order Item Production Date :", ProductionDate_OI)
+# print("Order Item Cost Price :", CostPrice_OI)
+# print("Order Item Override Price :", OverridePrice_OI)
+# print("Order Item Net Price :", NetPrice_OI)
+# print("Order Item VAT Price :", VAT_OI)
+# print("Order Item Gross Price :", GrossPrice_OI)
+
+# OrderItemQty_Row = driver.find_element(By.XPATH, "(//*[@col-id='qty'])[2]").text
+# OrderItemItem_Row = driver.find_element(By.XPATH, "(//*[@col-id='costprice'])[2]").text
+# OrderItemNet_Row = driver.find_element(By.XPATH, "(//*[@col-id='netprice'])[2]").text
+# OrderItemVAT_Row = driver.find_element(By.XPATH, "(//*[@col-id='vat'])[2]").text
+# OrderItemGross_Row = driver.find_element(By.XPATH, "(//*[@col-id='grossprice'])[2]").text
+# OrderItemOverride_Row = driver.find_element(By.XPATH, "(//*[@col-id='overridenetprice'])[2]").text
+# print("Qty :", OrderItemQty_Row)
+# print("Item :", OrderItemItem_Row)
+# print("Net :", OrderItemNet_Row)
+# print("VAT :", OrderItemVAT_Row)
+# print("Gross :", OrderItemGross_Row)
+# print("Override :", OrderItemOverride_Row)
+
+
+# TotalQty = driver.find_element(By.XPATH, "//*[@id='jobproduct_grid']/div/div[2]/div[2]/div[4]/div[2]/div/div/div[3]").text
+# TotalItemCost = driver.find_element(By.XPATH, "//*[@id='jobproduct_grid']/div/div[2]/div[2]/div[4]/div[2]/div/div/div[4]").text
+# TotalNet = driver.find_element(By.XPATH, "//*[@id='jobproduct_grid']/div/div[2]/div[2]/div[4]/div[2]/div/div/div[5]").text
+# TotalVAT = driver.find_element(By.XPATH, "//*[@id='jobproduct_grid']/div/div[2]/div[2]/div[4]/div[2]/div/div/div[6]").text
+# TotalGross = driver.find_element(By.XPATH, "//*[@id='jobproduct_grid']/div/div[2]/div[2]/div[4]/div[2]/div/div/div[7]").text
+# TotalOverride = driver.find_element(By.XPATH, "//*[@id='jobproduct_grid']/div/div[2]/div[2]/div[4]/div[2]/div/div/div[8]").text
+# print("Total Qty :", TotalQty)
+# print("Total Item Cost :", TotalItemCost)
+# print("Total Net :", TotalNet)
+# print("Total VAT :", TotalVAT)
+# print("Total Gross :", TotalGross)
+# print("Total Override :", TotalOverride)
+#
+# text1 = TotalItemCost
+# text2 = TotalCostPrice
+# if text1 == text2:
+#     print("Total Item Cost and Cost Price are equal")
+# else:
+#     print("Total Item Cost and Cost Price are not equal")
+#
+# current_date = datetime.now().strftime("%d-%m-%Y")
+# if (CreatedDate == current_date) and (OrderDate == current_date) and (InvoiceDate == current_date) and (CompletedDate == current_date):
+#     print("Date is Correct")
+# else:
+#     print("Date are Incorrect")

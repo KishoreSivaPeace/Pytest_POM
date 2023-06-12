@@ -40,48 +40,48 @@ class LoginTest(unittest.TestCase):
         driver = self.driver
         driver.get(Login_out_Locators.final_testing)
         LoginPage(driver).login_module()
-    #
-    # def test_02_add_job(self):
-    #     driver = self.driver
-    #     AddJob(driver).new_add_job()
-    #
-    # # @pytest.mark.skip
-    # def test_03_add_job_item(self):
-    #     driver = self.driver
-    #     JobItem(driver).new_job_item()
-    #
-    # def test_04_add_appointment(self):
-    #     driver = self.driver
-    #     AddAppointment(driver).add_appointment()
-    #
-    # def test_05_add_task(self):
-    #     driver = self.driver
-    #     AddTask(driver).add_task()
-    #
-    # # @pytest.mark.skip
-    # def test_06_job_copy_edit_delete(self):
-    #     driver = self.driver
-    #     JobCopyEditDelete(driver).job_copy_edit_delete()
-    #
-    # def test_07_add_payment(self):
-    #     driver = self.driver
-    #     AddPayment(driver).add_payment()
-    #
-    # def test_08_checklist(self):
-    #     driver = self.driver
-    #     Checklist(driver).checklist()
-    #
-    # def test_09_add_notes(self):
-    #     driver = self.driver
-    #     AddNotes(driver).add_notes()
-    #
-    # def test_10_add_further_info(self):
-    #     driver = self.driver
-    #     AddFurtherInfo(driver).add_further_info()
-    #
-    # def test_11_alternative_delivery_address(self):
-    #     driver = self.driver
-    #     AlternativeDeliveryAddress(driver).alternative_delivery_address()
+
+    def test_02_add_job(self):
+        driver = self.driver
+        AddJob(driver).new_add_job()
+
+    # @pytest.mark.skip
+    def test_03_add_job_item(self):
+        driver = self.driver
+        JobItem(driver).new_job_item()
+
+    def test_04_add_appointment(self):
+        driver = self.driver
+        AddAppointment(driver).add_appointment()
+
+    def test_05_add_task(self):
+        driver = self.driver
+        AddTask(driver).add_task()
+
+    # @pytest.mark.skip
+    def test_06_job_copy_edit_delete(self):
+        driver = self.driver
+        JobCopyEditDelete(driver).job_copy_edit_delete()
+
+    def test_07_add_payment(self):
+        driver = self.driver
+        AddPayment(driver).add_payment()
+
+    def test_08_checklist(self):
+        driver = self.driver
+        Checklist(driver).checklist()
+
+    def test_09_add_notes(self):
+        driver = self.driver
+        AddNotes(driver).add_notes()
+
+    def test_10_add_further_info(self):
+        driver = self.driver
+        AddFurtherInfo(driver).add_further_info()
+
+    def test_11_alternative_delivery_address(self):
+        driver = self.driver
+        AlternativeDeliveryAddress(driver).alternative_delivery_address()
 
     def test_12_log_out(self):
         driver = self.driver

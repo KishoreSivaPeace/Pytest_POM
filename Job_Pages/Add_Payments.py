@@ -10,7 +10,7 @@ class AddPayment():
         self.driver = driver
 
     def add_payment(self):
-        time.sleep(4)
+        time.sleep(6)
         self.driver.find_element(By.XPATH, Job_Form_Locators.payment_tab_id).click()
         time.sleep(3)
         self.driver.find_element(By.XPATH, Job_Form_Locators.add_payment_id).click()
