@@ -44,7 +44,6 @@ class LoginTest(unittest.TestCase):
         driver.get(Login_out_Locators.final_testing)
         LoginPage(driver).login_module()
 
-
     def test_02_add_job(self):
         driver = self.driver
         AddJob(driver).new_add_job()

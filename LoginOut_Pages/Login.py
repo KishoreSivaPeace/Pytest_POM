@@ -1,3 +1,5 @@
+import time
+
 import allure
 import pytest
 from allure_commons.types import AttachmentType
@@ -42,6 +44,7 @@ class LoginPage():
             Login_out_Locators.user_name)
         self.driver.find_element(By.CSS_SELECTOR, Login_out_Locators.password_id).send_keys(Login_out_Locators.password)
         self.driver.find_element(By.XPATH, Login_out_Locators.login_button_id).click()
+        time.sleep(2)
         allure.attach(self.driver.get_screenshot_as_png(),name="Error", attachment_type=AttachmentType.PNG)
 
     # def login_module(self, companyname,username,password):
