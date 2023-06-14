@@ -143,6 +143,9 @@ driver.implicitly_wait(10)
 # dropdown = driver.find_element(By.XPATH, "(//*[text()='Order Status'])[3]/following::select[1]")
 # select = Select(dropdown)
 # select.select_by_visible_text("In Progress")
+# dropdown = driver.find_element(By.XPATH, "(//*[text()='Job Status'])[3]/following::select[1]")
+# select = Select(dropdown)
+# select.select_by_visible_text("Invoiced")
 # driver.find_element(By.XPATH,"/html/body/app-root/main/section/app-job/div[11]/div/div[1]/div[2]/div[2]/button[1]").click()
 
 # Payments
@@ -254,8 +257,8 @@ driver.implicitly_wait(10)
 # print("Job Status :", JobStatus.text)
 #
 # dropdown = driver.find_element(By.XPATH, "(//*[text()='Order Status'])[3]/following::select[1]")
-# select1 = Select(dropdown)
-# OrderStatus = select1.first_selected_option
+# select2 = Select(dropdown)
+# OrderStatus = select2.first_selected_option
 # print("Order Status :", OrderStatus.text)
 #
 # CreatedDate_OI = driver.find_element(By.XPATH, "//*[@id='collapseOne']/div/form/div/div[2]/igx-date-picker/igx-input-group/div[1]/div/input").get_attribute("value")

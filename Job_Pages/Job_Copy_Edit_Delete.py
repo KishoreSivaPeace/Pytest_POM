@@ -41,5 +41,8 @@ class JobCopyEditDelete():
         dropdown = self.driver.find_element(By.XPATH, Job_Form_Locators.order_status_dropdown_id)
         select = Select(dropdown)
         select.select_by_visible_text("In Progress")
+        dropdown = self.driver.find_element(By.XPATH, Job_Form_Locators.job_status_dropdown_id)
+        select = Select(dropdown)
+        select.select_by_visible_text("Invoiced")
         self.driver.find_element(By.XPATH, Job_Form_Locators.save_job_button_id).click()
 

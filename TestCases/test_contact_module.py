@@ -1,6 +1,3 @@
-import allure
-import pytest
-from allure_commons.types import AttachmentType
 from selenium import webdriver
 from selenium.webdriver.edge.service import Service as EdgeService
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
@@ -10,7 +7,15 @@ import unittest
 from Locators.Login_Logout import Login_out_Locators
 from LoginOut_Pages.Login import LoginPage
 from LoginOut_Pages.logout import LogOut
-from Job_Pages.Add_Job import AddJob
+from Contact_Pages.Add_Contact import AddContact
+from Contact_Pages.Add_Job_from_Contact import AddJobFromContact
+from Contact_Pages.Company_Tab import CompanyTab
+from Contact_Pages.Pricing_Tab import PricingTab
+from Contact_Pages.Payment_Info_Tab import PaymentInfoTab
+from Contact_Pages.Commission_Tab import CommissionTab
+from Contact_Pages.Document_Tab import DocumentTab
+from Contact_Pages.Online_Portal_tab import OnlinePortalTab
+from Contact_Pages.FTP_Tab import FTPTab
 from Job_Pages.Add_Job_Item import JobItem
 from Job_Pages.Add_Appointment import AddAppointment
 from Job_Pages.Add_Task import AddTask
@@ -22,7 +27,7 @@ from Job_Pages.Add_Further_info import AddFurtherInfo
 from Job_Pages.Alternative_Delivery_Address import AlternativeDeliveryAddress
 
 
-class LoginTest(unittest.TestCase):
+class Contact_Module(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls) -> None:
@@ -44,49 +49,81 @@ class LoginTest(unittest.TestCase):
         driver.get(Login_out_Locators.final_testing)
         LoginPage(driver).login_module()
 
-    def test_02_add_job(self):
+    def test_02_add_contact(self):
         driver = self.driver
-        AddJob(driver).new_add_job()
+        AddContact(driver).add_contact()
+
+    def test_03_add_job_from_contact(self):
+        driver = self.driver
+        AddJobFromContact(driver).add_job_from_contact()
 
     # @pytest.mark.skip
-    def test_03_add_job_item(self):
+    def test_04_add_job_item(self):
         driver = self.driver
         JobItem(driver).new_job_item()
 
-    def test_04_add_appointment(self):
+    def test_05_add_appointment(self):
         driver = self.driver
         AddAppointment(driver).add_appointment()
 
-    def test_05_add_task(self):
+    def test_06_add_task(self):
         driver = self.driver
         AddTask(driver).add_task()
 
     # @pytest.mark.skip
-    def test_06_job_copy_edit_delete(self):
+    def test_07_job_copy_edit_delete(self):
         driver = self.driver
         JobCopyEditDelete(driver).job_copy_edit_delete()
 
-    def test_07_add_payment(self):
+    def test_08_add_payment(self):
         driver = self.driver
         AddPayment(driver).add_payment()
 
-    def test_08_checklist(self):
+    def test_09_checklist(self):
         driver = self.driver
         Checklist(driver).checklist()
 
-    def test_09_add_notes(self):
+    def test_10_add_notes(self):
         driver = self.driver
         AddNotes(driver).add_notes()
 
-    def test_10_add_further_info(self):
+    def test_11_add_further_info(self):
         driver = self.driver
         AddFurtherInfo(driver).add_further_info()
 
-    def test_11_alternative_delivery_address(self):
+    def test_12_alternative_delivery_address(self):
         driver = self.driver
         AlternativeDeliveryAddress(driver).alternative_delivery_address()
 
-    def test_12_log_out(self):
+    def test_13_company_tab(self):
+        driver = self.driver
+        CompanyTab(driver).company_tab()
+
+    def test_14_pricing_tab(self):
+        driver = self.driver
+        PricingTab(driver).pricing_tab()
+
+    def test_15_payment_tab(self):
+        driver = self.driver
+        PaymentInfoTab(driver).payment_info_tab()
+
+    def test_16_commission_tab(self):
+        driver = self.driver
+        CommissionTab(driver).commission_tab()
+
+    def test_17_document_tab(self):
+        driver = self.driver
+        DocumentTab(driver).document_tab()
+
+    def test_18_online_portal_tab(self):
+        driver = self.driver
+        OnlinePortalTab(driver).online_portal_tab()
+
+    def test_19_ftp_tab(self):
+        driver = self.driver
+        FTPTab(driver).ftp_tab()
+
+    def test_20_log_out(self):
         driver = self.driver
         LogOut(driver).logout()
 
