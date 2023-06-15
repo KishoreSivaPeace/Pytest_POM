@@ -5,7 +5,9 @@ class Job_Form_Locators():
     company_name_textbox_id = "#Company\ Name"
     first_name_textbox_id = "#First\ Name"
     last_name_textbox_id = "#Last\ Name"
+    customer_ref_field = "(//*[text()='Customer Ref'])[3]/following::input[1]"
     additional_ref_textbox_id = "//*[text()='Additional Ref']/following::input[1]"
+    status_ref_field = "//*[text()='Status Notes']/following::input[1]"
     save_job_button_id = "/html/body/app-root/main/section/app-job/div[11]/div/div[1]/div[2]/div[2]/button[1]"
 
     # Add Job Item ID's
@@ -60,6 +62,7 @@ class Job_Form_Locators():
     job_item_save_button_id = "//*[@id='sampleModal1']/div/div/div[2]/div/div[2]/div[2]/button[1]"
     job_item_All_select_id = "//*[@id='jobproduct_grid']/div/div[2]/div[2]/div[1]/div[1]/div[1]/div/div[2]/div[2]"
     job_from_3dot_options_id = "/html/body/app-root/main/section/app-job/div[11]/div/div[1]/div[2]/div[1]/div[1]/div[2]/div/div[2]/div/button"
+    job_form_3dot_view_account_id = "/html/body/app-root/main/section/app-job/div[11]/div/div[1]/div[2]/div[1]/div[1]/div[2]/div/div[2]/div/div/button[2]"
     Job_from_3dot_copy_id = "/html/body/app-root/main/section/app-job/div[11]/div/div[1]/div[2]/div[1]/div[1]/div[2]/div/div[2]/div/div/button[5]"
     Job_from_3dot_paste_id = "/html/body/app-root/main/section/app-job/div[11]/div/div[1]/div[2]/div[1]/div[1]/div[2]/div/div[2]/div/div/button[6]"
     job_item_delete_id = "//*[@id='jobproduct_grid']/div/div[2]/div[2]/div[3]/div[3]/div[1]/div[1]/app-moreoptionsrender/div/div/a[3]"

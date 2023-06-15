@@ -4,100 +4,85 @@ import pyautogui
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
+from Locators.Contact_Module import Contact_Locators
 
 
 class PaymentInfoTab():
     def __init__(self, driver):
-        self.driver =driver
-        
+        self.driver = driver
+
     def payment_info_tab(self):
         time.sleep(6)
-        self.driver.find_element(By.XPATH, "(//*[@class='mat-tab-labels'])[2]/div[4]").click()
+        self.driver.find_element(By.XPATH, Contact_Locators.payment_info_tab).click()
         time.sleep(4)
-        self.driver.find_element(By.XPATH, "(//*[@class='radiomark'])[1]").click()
+        self.driver.find_element(By.XPATH, Contact_Locators).click()
         time.sleep(3)
-        FilterDate = self.driver.find_element(By.XPATH, "(//*[@class='radiomark'])[2]/following::select[1]")
+        FilterDate = self.driver.find_element(By.XPATH, Contact_Locators.payment_filter_dropdown)
         select = Select(FilterDate)
         select.select_by_visible_text("Last 30 Days")
         time.sleep(3)
-        self.driver.find_element(By.XPATH,
-                            "//*[@id='accountonfogrid']/div/div[2]/div[2]/div[3]/div[2]/div/div/div/div[8]").click()
-        self.driver.find_element(By.XPATH,
-                            "//*[@id='accountonfogrid']/div/div[2]/div[2]/div[3]/div[2]/div/div/div/div[8]/editor-cell/input").send_keys(
-            "4.89")
-        self.driver.find_element(By.XPATH,
-                            "//*[@id='accountonfogrid']/div/div[2]/div[2]/div[3]/div[2]/div/div/div/div[9]").click()
-        self.driver.find_element(By.XPATH,
-                            "//*[@id='accountonfogrid']/div/div[2]/div[2]/div[3]/div[2]/div/div/div/div[10]").click()
-        self.driver.find_element(By.XPATH, "(//*[@col-id='paiddate'])[2]").click()
-        self.driver.find_element(By.XPATH,
-                            "//*[@id='accountonfogrid']/div/div[2]/div[2]/div[3]/div[2]/div/div/div/div[3]").click()
+        self.driver.find_element(By.XPATH, Contact_Locators.awaiting_amount_field).click()
+        self.driver.find_element(By.XPATH, Contact_Locators.awaiting_amount_input).send_keys("4.89")
+        self.driver.find_element(By.XPATH, Contact_Locators.payment_method_dropdown).click()
+        self.driver.find_element(By.XPATH, Contact_Locators.payment_type_dropdown).click()
+        self.driver.find_element(By.XPATH, Contact_Locators.paid_date_field).click()
+        self.driver.find_element(By.XPATH, Contact_Locators.job_status_value).click()
         time.sleep(5)
-        self.driver.find_element(By.XPATH, "(//*[@class='radiomark'])[2]").click()
+        self.driver.find_element(By.XPATH, Contact_Locators.paid_radio_button).click()
         time.sleep(5)
-        self.driver.find_element(By.XPATH, "//*[text()='Bulk Payments']").click()
+        self.driver.find_element(By.XPATH, Contact_Locators.bulk_payment_button).click()
         time.sleep(3)
-        PayMethod = self.driver.find_element(By.XPATH, "//*[@id='payment_method']")
+        PayMethod = self.driver.find_element(By.XPATH, Contact_Locators.bulk_payment_method_dropdown)
         select1 = Select(PayMethod)
         select1.select_by_visible_text("Paypal")
-        PayType = self.driver.find_element(By.XPATH, "//*[@name='paymenttype']")
+        PayType = self.driver.find_element(By.XPATH, Contact_Locators.bulk_payment_type_dropdown)
         select2 = Select(PayType)
         select2.select_by_visible_text("Intermediate")
-        JobStatusBulk = self.driver.find_element(By.XPATH, "//*[@name='jobStatus']")
+        JobStatusBulk = self.driver.find_element(By.XPATH, Contact_Locators.bulk_job_status_filter_dropdown)
         select3 = Select(JobStatusBulk)
         select3.select_by_visible_text("Invoiced")
         time.sleep(3)
-        self.driver.find_element(By.XPATH,
-                            "//*[@id='BulkUpdateModal']/div/div/form/div[2]/div[3]/ag-grid-angular/div/div[2]/div[2]/div[1]/div[2]/div/div[1]/div[1]/div[2]/div[2]/input").click()
-        self.driver.find_element(By.XPATH, "//*[@name='amount']").send_keys("15.78")
-        self.driver.find_element(By.XPATH, "//*[@id='BulkUpdateModal']/div/div/form/div[3]/button[1]").click()
+        self.driver.find_element(By.XPATH, Contact_Locators.bulk_job_checkbox).click()
+        self.driver.find_element(By.XPATH, Contact_Locators.bulk_amount).send_keys("15.78")
+        self.driver.find_element(By.XPATH, Contact_Locators.bulk_save_button).click()
         time.sleep(4)
         action = ActionChains(self.driver)
-        action.move_to_element(
-            self.driver.find_element(By.XPATH, "(//*[@class='mat-tab-labels'])[3]/div[2]/div")).click().perform()
+        action.move_to_element(self.driver.find_element(By.XPATH, Contact_Locators.account_info_tab)).click().perform()
         time.sleep(1)
-        self.driver.find_element(By.XPATH, "//*[text()='Add Credit']/following::input[1]").send_keys("420")
-        self.driver.find_element(By.XPATH, "//*[text()='Add Credit']/following::button[1]").click()
+        self.driver.find_element(By.XPATH, Contact_Locators.add_credit_field).send_keys("420")
+        self.driver.find_element(By.XPATH, Contact_Locators.add_credit_plus).click()
         time.sleep(2)
-        self.driver.find_element(By.XPATH, "(//*[@class='mat-tab-labels'])[3]/div[1]").click()
+        self.driver.find_element(By.XPATH, Contact_Locators.payment_info_sub_tab).click()
         time.sleep(1)
-        self.driver.find_element(By.XPATH, "(//*[@class='radiomark'])[1]").click()
+        self.driver.find_element(By.XPATH, Contact_Locators.payment_info_tab).click()
         time.sleep(3)
-        self.driver.find_element(By.XPATH,
-                            "//*[@id='accountonfogrid']/div/div[2]/div[2]/div[3]/div[2]/div/div/div/div[8]").click()
-        self.driver.find_element(By.XPATH,
-                            "//*[@id='accountonfogrid']/div/div[2]/div[2]/div[3]/div[2]/div/div/div/div[8]/editor-cell/input").send_keys(
-            "5.89")
-        self.driver.find_element(By.XPATH,
-                            "//*[@id='accountonfogrid']/div/div[2]/div[2]/div[3]/div[2]/div/div/div/div[9]").click()
-        self.driver.find_element(By.XPATH,
-                            "//*[@id='accountonfogrid']/div/div[2]/div[2]/div[3]/div[2]/div/div/div/div[10]").click()
-        self.driver.find_element(By.XPATH,
-                            "//*[@id='accountonfogrid']/div/div[2]/div[2]/div[3]/div[2]/div/div/div/div[10]").click()
+        self.driver.find_element(By.XPATH, Contact_Locators.awaiting_amount_field).click()
+        self.driver.find_element(By.XPATH, Contact_Locators.awaiting_amount_input).send_keys("5.89")
+        self.driver.find_element(By.XPATH, Contact_Locators.payment_method_dropdown).click()
+        self.driver.find_element(By.XPATH, Contact_Locators.payment_type_dropdown).click()
+        self.driver.find_element(By.XPATH, Contact_Locators.payment_type_dropdown).click()
         pyautogui.press('down')
         pyautogui.press('down')
         pyautogui.press('down')
         pyautogui.press('down')
         pyautogui.press('enter')
-        self.driver.find_element(By.XPATH, "(//*[@col-id='paiddate'])[2]").click()
-        self.driver.find_element(By.XPATH,
-                            "//*[@id='accountonfogrid']/div/div[2]/div[2]/div[3]/div[2]/div/div/div/div[3]").click()
+        self.driver.find_element(By.XPATH, Contact_Locators.paid_date_field).click()
+        self.driver.find_element(By.XPATH, Contact_Locators.job_status_value).click()
         time.sleep(6)
-        self.driver.find_element(By.XPATH, "(//*[@class='radiomark'])[2]").click()
+        self.driver.find_element(By.XPATH, Contact_Locators.paid_radio_button).click()
         time.sleep(5)
-        self.driver.find_element(By.XPATH, "//*[text()='Bulk Payments']").click()
+        self.driver.find_element(By.XPATH, Contact_Locators.bulk_payment_button).click()
         time.sleep(3)
-        PayMethod = self.driver.find_element(By.XPATH, "//*[@id='payment_method']")
+        PayMethod = self.driver.find_element(By.XPATH, Contact_Locators.bulk_payment_method_dropdown)
         select11 = Select(PayMethod)
         select11.select_by_visible_text("Paypal")
-        PayType = self.driver.find_element(By.XPATH, "//*[@name='paymenttype']")
+        PayType = self.driver.find_element(By.XPATH, Contact_Locators.bulk_payment_type_dropdown)
         select22 = Select(PayType)
         select22.select_by_visible_text("Redeem Credit Note")
-        JobStatusBulk = self.driver.find_element(By.XPATH, "//*[@name='jobStatus']")
+        JobStatusBulk = self.driver.find_element(By.XPATH, Contact_Locators.bulk_job_status_filter_dropdown)
         select33 = Select(JobStatusBulk)
         select33.select_by_visible_text("Invoiced")
         time.sleep(3)
-        self.driver.find_element(By.XPATH,
-                            "//*[@id='BulkUpdateModal']/div/div/form/div[2]/div[3]/ag-grid-angular/div/div[2]/div[2]/div[1]/div[2]/div/div[1]/div[1]/div[2]/div[2]/input").click()
-        self.driver.find_element(By.XPATH, "//*[@name='amount']").send_keys("15.78")
-        self.driver.find_element(By.XPATH, "//*[@id='BulkUpdateModal']/div/div/form/div[3]/button[1]").click()
+        self.driver.find_element(By.XPATH, Contact_Locators.bulk_job_checkbox).click()
+        self.driver.find_element(By.XPATH, Contact_Locators.bulk_amount).send_keys("15.78")
+        self.driver.find_element(By.XPATH, Contact_Locators.bulk_save_button).click()
