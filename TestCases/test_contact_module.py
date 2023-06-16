@@ -14,6 +14,7 @@ from Contact_Pages.Pricing_Tab import PricingTab
 from Contact_Pages.Payment_Info_Tab import PaymentInfoTab
 from Contact_Pages.Commission_Tab import CommissionTab
 from Contact_Pages.Document_Tab import DocumentTab
+from Contact_Pages.Product_Config_Tab import ProductConfigTab
 from Contact_Pages.Online_Portal_tab import OnlinePortalTab
 from Contact_Pages.FTP_Tab import FTPTab
 from Job_Pages.Add_Job_Item import JobItem
@@ -115,15 +116,19 @@ class Contact_Module(unittest.TestCase):
         driver = self.driver
         DocumentTab(driver).document_tab()
 
-    def test_18_online_portal_tab(self):
+    def test_18_product_config_tab(self):
+        driver = self.driver
+        ProductConfigTab(driver).product_config_tab()
+
+    def test_19_online_portal_tab(self):
         driver = self.driver
         OnlinePortalTab(driver).online_portal_tab()
 
-    def test_19_ftp_tab(self):
+    def test_20_ftp_tab(self):
         driver = self.driver
         FTPTab(driver).ftp_tab()
 
-    def test_20_log_out(self):
+    def test_21_log_out(self):
         driver = self.driver
         LogOut(driver).logout()
 
