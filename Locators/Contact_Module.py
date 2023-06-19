@@ -185,7 +185,6 @@ class Contact_Locators():
     gross_profit_3dot_delete = "//*[@id='gross']/div/div[6]/div/div[2]/div/lib-grossprofitheadercell/div/div[3]/span"
     gross_profit_3dot_delete_ok = "//*[@id='deletecomomnotfication']/div/div/div/div/div/button[1]"
 
-
     # Online Portal Tab
     online_portal_tab = "(//*[@class='mat-tab-labels'])[2]/div[10]"
     online_portal_all_job_dropdown = "//*[@id='alljobview']"
@@ -207,3 +206,16 @@ class Contact_Locators():
     ftp_save_button = "//*[@id='ftppopup']/div/div/form/div[3]/button[1]"
     ftp_delete_icon = "//*[@id='ftpdetails']/div/div[2]/div[2]/div[3]/div[2]/div/div/div/div[10]/app-ftpdelete"
     ftp_delete_ok = "//*[@id='deletecomomnotfication']/div/div/div/div/div/button[1]"
+
+    # Add Task From 3Dots
+    lead_customer_name = "html/body/app-root/main/section/app-customer/div[1]/ul/li[1]/span"
+    contact_1st_row_3dot = "//*[@id='cont_contact']/div/div[2]/div[2]/div[3]/div[3]/div[1]/div[1]/div/span/app-contactlisticon/div/div/div/button/i"
+    contact_add_task_option = "//*[@id='cont_contact']/div/div[2]/div[2]/div[3]/div[3]/div[1]/div[1]/div/span/app-contactlisticon/div/div/div/div/button[3]"
+    contact_task_date_field = "(//*[text()='Add Task'])[2]/following::input[2]"
+    contact_task_repeat_button = "(//*[text()='Add Task'])[2]/following::input[2]"
+    contact_task_repeat_type = "(//*[@id='addtaskbody']/div[1]/div/div[4]/div[2]/div/div/label/div)[2]"
+    contact_task_repeat_every_field = "//*[@id='RecurrenceEditor']/ejs-recurrenceeditor/div/div[1]/div"
+    contact_task_repeat_end_field = "//*[@id='RecurrenceEditor']/ejs-recurrenceeditor/div/div[5]/div[2]/span"
+    contact_task_repeat_save_button = "//*[@id='RecurrenceEditor']/div/button[1]"
+    contact_task_description_field = "(//*[@id='taskdescription'])[2]"
+    contact_task_save_button = "(//*[@id='addtaskform']/div[4]/input)[2]"
