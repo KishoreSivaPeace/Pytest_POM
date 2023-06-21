@@ -136,10 +136,12 @@ class ProductConfigTab():
 
         # Product Config - Product Gross Profit
         self.driver.find_element(By.XPATH, Contact_Locators.gross_profit_tab).click()
+        time.sleep(1)
         self.driver.find_element(By.XPATH, Contact_Locators.gross_profit_add_button).click()
         time.sleep(2)
         self.driver.find_element(By.XPATH, Contact_Locators.gross_profit_field).send_keys("8.78")
         self.driver.find_element(By.XPATH, Contact_Locators.gross_profit_product_dropdown).click()
+        time.sleep(1)
         self.driver.find_element(By.XPATH, Contact_Locators.gross_profit_product_option1).click()
         time.sleep(2)
         self.driver.find_element(By.XPATH, Contact_Locators.gross_profit_price_group_dropdown).click()
@@ -151,6 +153,7 @@ class ProductConfigTab():
         time.sleep(2)
         self.driver.find_element(By.XPATH, Contact_Locators.gross_profit_field).send_keys("9.29")
         self.driver.find_element(By.XPATH, Contact_Locators.gross_profit_product_dropdown).click()
+        time.sleep(1)
         self.driver.find_element(By.XPATH, Contact_Locators.gross_profit_product_option2).click()
         time.sleep(2)
         self.driver.find_element(By.XPATH, Contact_Locators.gross_profit_price_group_dropdown).click()

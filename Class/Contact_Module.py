@@ -27,7 +27,7 @@ driver.implicitly_wait(10)
 # driver.find_element(By.CSS_SELECTOR, "#password").send_keys("1103")
 # driver.find_element(By.XPATH, "/html/body/app-root/main/section/lib-login/div/div/div/div/div[2]/div/form/div[4]/button[1]").click()
 # time.sleep(5)
-#
+
 # # Add Contact
 # driver.find_element(By.XPATH, "//*[@class='nav-head']/mat-toolbar-row/div/div[1]/div/a[6]").click()
 # time.sleep(4)
@@ -394,9 +394,10 @@ driver.implicitly_wait(10)
 # time.sleep(1)
 # driver.find_element(By.XPATH, "//*[@id='deletecomomnotfication']/div/div/div/div/div/button[1]").click()
 # time.sleep(4)
-#
-# # Product Config - Product Gross Profit
+# #
+# # # Product Config - Product Gross Profit
 # driver.find_element(By.XPATH, "//*[@id='headingfour']/h5/button").click()
+# time.sleep(1)
 # driver.find_element(By.XPATH, "//*[@id='headingfour']/h5/button[2]").click()
 # time.sleep(2)
 # driver.find_element(By.XPATH, "(//*[text()='Gross Profit'])[2]/following::input").send_keys("8.78")

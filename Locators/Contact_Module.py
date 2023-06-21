@@ -249,6 +249,8 @@ class Contact_Locators():
     contact_tab_task_repeat_save_button = "//*[@id='RecurrenceEditor']/div/button[1]"
     contact_tab_task_description_field = "(//*[@id='taskdescription'])[2]"
     contact_tab_task_save_button = "(//*[@id='addtaskform']/div[4]/input)[2]"
+    contact_tab_task_cancel_button = "(//*[@id='addtaskform']/div[4]/button)[2]"
+
 
     # Add Appointment From Contact Tab
     contact_tab_add_appointment_icon = "//*[@id='myGridcontact']/div/div[2]/div[2]/div[3]/div[3]/div/div[2]"

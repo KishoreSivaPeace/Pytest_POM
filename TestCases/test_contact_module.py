@@ -143,22 +143,22 @@ class Contact_Module(unittest.TestCase):
         driver = self.driver
         AddAppointmentFrom3dots(driver).add_appointment_from_3dots()
 
-    @pytest.mark.skip
+    # @pytest.mark.skip
     def test_23_add_task_from_contact_tab(self):
         driver = self.driver
         AddTaskFromContactTab(driver).add_task_from_contact_tab()
 
-    @pytest.mark.skip
+    # @pytest.mark.skip
     def test_24_add_appointment_from_contact_tab(self):
         driver = self.driver
         AddAppointmentFromContactTab(driver).add_appointment_from_contact_tab()
 
-    @pytest.mark.skip
+    # @pytest.mark.skip
     def test_25_add_contact_from_contact_tab(self):
         driver = self.driver
         AddContactFromContactTab(driver).add_contact_from_contact_tab()
 
-    @pytest.mark.skip
+    # @pytest.mark.skip
     def test_26_delete_contacts(self):
         driver = self.driver
         DeleteContact(driver).delete_contact()

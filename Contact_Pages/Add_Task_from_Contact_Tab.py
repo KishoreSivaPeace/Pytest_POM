@@ -37,3 +37,4 @@ class AddTaskFromContactTab():
         time.sleep(3)
         self.driver.find_element(By.XPATH, Contact_Locators.contact_tab_task_description_field).send_keys("Automation Test")
         self.driver.find_element(By.XPATH, Contact_Locators.contact_tab_task_save_button).click()
+        self.driver.find_element(By.XPATH, Contact_Locators.contact_tab_task_cancel_button).click()
