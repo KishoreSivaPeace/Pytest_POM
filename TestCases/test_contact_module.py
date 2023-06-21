@@ -154,7 +154,7 @@ class Contact_Module(unittest.TestCase):
         AddAppointmentFromContactTab(driver).add_appointment_from_contact_tab()
 
     @pytest.mark.skip
-    def test_25_add_conatact_from_contact_tab(self):
+    def test_25_add_contact_from_contact_tab(self):
         driver = self.driver
         AddContactFromContactTab(driver).add_contact_from_contact_tab()
 
