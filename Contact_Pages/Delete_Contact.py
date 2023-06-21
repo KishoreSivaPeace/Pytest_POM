@@ -2,6 +2,7 @@ import time
 
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
+from Locators.Contact_Module import Contact_Locators
 
 
 class DeleteContact():
@@ -12,16 +13,15 @@ class DeleteContact():
         time.sleep(6)
         # From Contact Tab
         action = ActionChains(self.driver)
-        action.move_to_element(self.driver.find_element(By.XPATH,
-                                                   "//*[@id='myGridcontact']/div/div[2]/div[2]/div[3]/div[3]/div/div[1]")).click().perform()
+        action.move_to_element(self.driver.find_element(By.XPATH, Contact_Locators.contact_tab_delete_icon)).click().perform()
         time.sleep(1)
-        self.driver.find_element(By.XPATH, "//*[@id='deletecomomnotfication']/div/div/div/div/div/button[1]").click()
+        self.driver.find_element(By.XPATH, Contact_Locators.contact_tab_delete_ok_button).click()
         time.sleep(5)
         # From 3dots
-        self.driver.find_element(By.XPATH, "html/body/app-root/main/section/app-customer/div[1]/ul/li[1]/span").click()
+        self.driver.find_element(By.XPATH, Contact_Locators.contact_tab_leads_customers_name).click()
         time.sleep(8)
-        self.driver.find_element(By.XPATH, "//*[@id='cont_contact']/div/div[2]/div[2]/div[3]/div[3]/div[1]/div[1]/div/span/app-contactlisticon/div/div/div/button/i").click()
-        self.driver.find_element(By.XPATH, "//*[@id='cont_contact']/div/div[2]/div[2]/div[3]/div[3]/div[1]/div[1]/div/span/app-contactlisticon/div/div/div/div/button[5]").click()
+        self.driver.find_element(By.XPATH, Contact_Locators.contact_1st_row_3dot_icon).click()
+        self.driver.find_element(By.XPATH, Contact_Locators.contact_1st_row_3dot_delete_option).click()
         time.sleep(1)
-        self.driver.find_element(By.XPATH, "//*[@id='deletecomomnotfication']/div/div/div/div/div/button[1]").click()
+        self.driver.find_element(By.XPATH, Contact_Locators.contact_1st_row_3dot_delete_ok_button).click()
         time.sleep(9)

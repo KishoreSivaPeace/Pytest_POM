@@ -1,3 +1,4 @@
+import pytest
 from selenium import webdriver
 from selenium.webdriver.edge.service import Service as EdgeService
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
@@ -17,6 +18,12 @@ from Contact_Pages.Document_Tab import DocumentTab
 from Contact_Pages.Product_Config_Tab import ProductConfigTab
 from Contact_Pages.Online_Portal_tab import OnlinePortalTab
 from Contact_Pages.FTP_Tab import FTPTab
+from Contact_Pages.Add_Task_from_3dots import AddTaskFrom3Dots
+from Contact_Pages.Add_Appointment_from_3dots import AddAppointmentFrom3dots
+from Contact_Pages.Add_Task_from_Contact_Tab import AddTaskFromContactTab
+from Contact_Pages.Add_Appointment_from_Contact_Tab import AddAppointmentFromContactTab
+from Contact_Pages.Add_Contact_from_Contact_Tab import AddContactFromContactTab
+from Contact_Pages.Delete_Contact import DeleteContact
 from Job_Pages.Add_Job_Item import JobItem
 from Job_Pages.Add_Appointment import AddAppointment
 from Job_Pages.Add_Task import AddTask
@@ -128,7 +135,35 @@ class Contact_Module(unittest.TestCase):
         driver = self.driver
         FTPTab(driver).ftp_tab()
 
-    def test_21_log_out(self):
+    def test_21_add_task_from_3dots(self):
+        driver = self.driver
+        AddTaskFrom3Dots(driver).add_task_from_3dots()
+
+    def test_22_add_appointment_from_3dots(self):
+        driver = self.driver
+        AddAppointmentFrom3dots(driver).add_appointment_from_3dots()
+
+    @pytest.mark.skip
+    def test_23_add_task_from_contact_tab(self):
+        driver = self.driver
+        AddTaskFromContactTab(driver).add_task_from_contact_tab()
+
+    @pytest.mark.skip
+    def test_24_add_appointment_from_contact_tab(self):
+        driver = self.driver
+        AddAppointmentFromContactTab(driver).add_appointment_from_contact_tab()
+
+    @pytest.mark.skip
+    def test_25_add_conatact_from_contact_tab(self):
+        driver = self.driver
+        AddContactFromContactTab(driver).add_contact_from_contact_tab()
+
+    @pytest.mark.skip
+    def test_26_delete_contacts(self):
+        driver = self.driver
+        DeleteContact(driver).delete_contact()
+
+    def test_27_log_out(self):
         driver = self.driver
         LogOut(driver).logout()
 

@@ -12,7 +12,7 @@ class AddTaskFrom3Dots():
     def add_task_from_3dots(self):
         time.sleep(6)
         self.driver.find_element(By.XPATH, Contact_Locators.lead_customer_name).click()
-        time.sleep(8)
+        time.sleep(10)
         self.driver.find_element(By.XPATH, Contact_Locators.contact_1st_row_3dot).click()
         self.driver.find_element(By.XPATH, Contact_Locators.contact_add_task_option).click()
         time.sleep(3)

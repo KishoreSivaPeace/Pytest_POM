@@ -3,6 +3,7 @@ import time
 import pyautogui
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
+from Locators.Contact_Module import Contact_Locators
 
 
 class AddAppointmentFrom3dots():
@@ -11,32 +12,31 @@ class AddAppointmentFrom3dots():
         
     def add_appointment_from_3dots(self):
         time.sleep(6)
-        self.driver.find_element(By.XPATH, "//*[@id='cont_contact']/div/div[2]/div[2]/div[3]/div[3]/div[1]/div[1]/div/span/app-contactlisticon/div/div/div/button/i").click()
-        self.driver.find_element(By.XPATH, "//*[@id='cont_contact']/div/div[2]/div[2]/div[3]/div[3]/div[1]/div[1]/div/span/app-contactlisticon/div/div/div/div/button[4]").click()
+        self.driver.find_element(By.XPATH, Contact_Locators.contact_1st_row_3dot).click()
+        self.driver.find_element(By.XPATH, Contact_Locators.contact_add_appointment_option).click()
         time.sleep(8)
-        self.driver.find_element(By.XPATH, "//*[@id='formID2']/div/div[2]/div[1]/div/div/label/div/label/span").click()
-        self.driver.find_element(By.XPATH, "//*[@id='repeatflag']/div/div/label/div").click()
+        self.driver.find_element(By.XPATH, Contact_Locators.contact_appointment_allday_checkbox).click()
+        self.driver.find_element(By.XPATH, Contact_Locators.contact_appointment_repeat_button).click()
         time.sleep(2)
         action = ActionChains(self.driver)
-        action.move_to_element(self.driver.find_element(By.XPATH, "//*[@id='scheduleEditForm']/div[1]/div/div[1]/div/div[1]/div/input")).click().perform()
-        # self.driver.find_element(By.XPATH, "//*[@id='scheduleEditForm']/div[1]/div/div[1]/div/div[1]/div/input").click()
+        action.move_to_element(self.driver.find_element(By.XPATH, Contact_Locators.contact_appointment_repeat_option)).click().perform()
         time.sleep(1)
         pyautogui.press('down')
         pyautogui.press('enter')
-        self.driver.find_element(By.XPATH, "//*[@id='scheduleEditForm']/div[1]/div/div[1]/div/div[2]/table/tbody/tr/td/div/input[1]").click()
+        self.driver.find_element(By.XPATH, Contact_Locators.contact_appointment_repeat_every_field).click()
         time.sleep(1)
-        self.driver.find_element(By.XPATH, "//*[@id='scheduleEditForm']/div[1]/div/div[1]/div/div[2]/table/tbody/tr/td/div/input[1]").send_keys("4")
-        self.driver.find_element(By.XPATH, "//*[@id='scheduleEditForm']/div[1]/div/div[2]/button[1]").click()
+        self.driver.find_element(By.XPATH, Contact_Locators.contact_appointment_repeat_every_field).send_keys("4")
+        self.driver.find_element(By.XPATH, Contact_Locators.contact_appointment_repeat_save_button).click()
         time.sleep(2)
-        self.driver.find_element(By.XPATH, "//*[text()='Appointment type ']/following::mat-select[1]").click()
-        self.driver.find_element(By.XPATH, "//*[text()='Measurer']").click()
-        self.driver.find_element(By.XPATH, "//*[@id='employee']/div/div[1]/span").click()
+        self.driver.find_element(By.XPATH, Contact_Locators.contact_appointment_type).click()
+        self.driver.find_element(By.XPATH, Contact_Locators.contact_appointment_type_option).click()
+        self.driver.find_element(By.XPATH, Contact_Locators.contact_appointment_staff).click()
         time.sleep(4)
-        self.driver.find_element(By.XPATH, "//*[@id='employee']/div/div[2]/ul[1]/li[1]/div").click()
+        self.driver.find_element(By.XPATH, Contact_Locators.contact_appointment_staff_option).click()
         time.sleep(3)
-        self.driver.find_element(By.XPATH, "//*[@id='formID2']/div/div[5]/div/div[1]/div/div[1]").click()
-        self.driver.find_element(By.XPATH, "//*[text()='Appointment Status ']/following::div[1]").click()
-        self.driver.find_element(By.XPATH, "//*[text()=' Confirmed ']").click()
-        self.driver.find_element(By.XPATH, "//*[@id='jobDescription']").send_keys("Automation Test")
-        self.driver.find_element(By.XPATH, "//*[@id='schedule_dialog_wrapper']/div[3]/button[2]").click()
+        self.driver.find_element(By.XPATH, Contact_Locators.contact_appointment_traveltime).click()
+        self.driver.find_element(By.XPATH, Contact_Locators.contact_appointment_status).click()
+        self.driver.find_element(By.XPATH, Contact_Locators.contact_appointment_status_option).click()
+        self.driver.find_element(By.XPATH, Contact_Locators.contact_appointment_description_field).send_keys("Automation Test")
+        self.driver.find_element(By.XPATH, Contact_Locators.contact_appointment_save_button).click()
         
