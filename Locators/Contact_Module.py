@@ -4,7 +4,7 @@ class Contact_Locators():
     contact_add_button = "//*[@class='header']/div[2]/div/div[4]/button"
     add_customer_button = "//*[@class='header']/div[2]/div/div[4]/div/a[1]"
     choose_contact_type = "//*[@id='contacttypemodel']/div/div/form/div/div/div[2]/mat-form-field"
-    select_contact_type = "(//*[@id='contact_choose-panel']/div/mat-option)[4]"
+    select_contact_type = "(//*[@id='contact_choose-panel']/div/mat-option)[3]"
     next_button = "//*[@id='contacttypemodel']/div/div/form/div[3]/button[1]"
     role_field = "//*[@placeholder='Role']"
     first_name_field = "//*[@id='First Name']"
