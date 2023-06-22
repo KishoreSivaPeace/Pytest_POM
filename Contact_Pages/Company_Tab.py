@@ -18,9 +18,9 @@ class CompanyTab():
         window_handles = self.driver.window_handles
         next_window_handle = window_handles[(window_handles.index(current_window_handle) + 1) % len(window_handles)]
         self.driver.switch_to.window(next_window_handle)
-        time.sleep(6)
+        time.sleep(10)
         self.driver.find_element(By.XPATH, Contact_Locators.company_tab).click()
-        time.sleep(4)
+        time.sleep(5)
         self.driver.find_element(By.XPATH, Contact_Locators.company_acc_ref_field).send_keys("ACC005")
         self.driver.find_element(By.XPATH, Contact_Locators.company_source_field).click()
         self.driver.find_element(By.XPATH, Contact_Locators.company_source_search).send_keys("FB")
