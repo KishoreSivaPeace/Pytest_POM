@@ -91,7 +91,7 @@ class Contact_Locators():
     account_info_tab = "(//*[@class='mat-tab-labels'])[3]/div[2]/div"
     add_credit_field = "//*[text()='Add Credit']/following::input[1]"
     add_credit_plus = "//*[text()='Add Credit']/following::button[1]"
-    payment_info_sub_tab = "(//*[@class='mat-tab-labels'])[3]/div[1]"
+    payment_info_sub_tab = "(//*[@class='mat-tab-labels'])[3]/div[1]/div"
 
     # Commission Tab
     commission_tab = "(//*[@class='mat-tab-labels'])[2]/div[5]"
@@ -238,7 +238,7 @@ class Contact_Locators():
     contact_appointment_save_button = "//*[@id='schedule_dialog_wrapper']/div[3]/button[2]"
 
     # Add Task From Contact Tab
-    contact_1st_row = "//*[@id='cont_contact']/div/div[2]/div[2]/div[3]/div[3]/div[1]/div[1]/div/span/app-contactlisticon/div/div/div/button/i"
+    contact_1st_row = "//*[@id='cont_contact']/div/div[2]/div[2]/div[3]/div[2]/div/div/div[1]/div[3]/div/span/span/a"
     contact_tab_cancel_button = "//*[@id='leadcustform']/div[2]/button[2]"
     contact_tab_add_task_icon = "//*[@id='myGridcontact']/div/div[2]/div[2]/div[3]/div[3]/div/div[3]"
     contact_tab_task_date_field = "(//*[text()='Add Task'])[2]/following::input[2]"

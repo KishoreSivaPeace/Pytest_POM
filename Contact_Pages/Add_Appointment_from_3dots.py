@@ -33,7 +33,7 @@ class AddAppointmentFrom3dots():
         self.driver.find_element(By.XPATH, Contact_Locators.contact_appointment_staff).click()
         time.sleep(4)
         self.driver.find_element(By.XPATH, Contact_Locators.contact_appointment_staff_option).click()
-        time.sleep(3)
+        time.sleep(6)
         self.driver.find_element(By.XPATH, Contact_Locators.contact_appointment_traveltime).click()
         self.driver.find_element(By.XPATH, Contact_Locators.contact_appointment_status).click()
         self.driver.find_element(By.XPATH, Contact_Locators.contact_appointment_status_option).click()

@@ -394,7 +394,8 @@ driver.implicitly_wait(10)
 # time.sleep(1)
 # driver.find_element(By.XPATH, "//*[@id='deletecomomnotfication']/div/div/div/div/div/button[1]").click()
 # time.sleep(4)
-# #
+# driver.find_element(By.XPATH, "//*[@id='headingthree']/h5/button").click()
+
 # # # Product Config - Product Gross Profit
 # driver.find_element(By.XPATH, "//*[@id='headingfour']/h5/button").click()
 # time.sleep(1)
