@@ -70,13 +70,13 @@ class Contact_Module(unittest.TestCase):
         driver = self.driver
         JobItem(driver).new_job_item()
 
-    # def test_05_add_appointment(self):
-    #     driver = self.driver
-    #     AddAppointment(driver).add_appointment()
+    def test_05_add_appointment(self):
+        driver = self.driver
+        AddAppointment(driver).add_appointment()
 
-    # def test_06_add_task(self):
-    #     driver = self.driver
-    #     AddTask(driver).add_task()
+    def test_06_add_task(self):
+        driver = self.driver
+        AddTask(driver).add_task()
 
     # @pytest.mark.skip
     def test_07_job_copy_edit_delete(self):
@@ -87,53 +87,53 @@ class Contact_Module(unittest.TestCase):
         driver = self.driver
         AddPayment(driver).add_payment()
 
-    # def test_09_checklist(self):
-    #     driver = self.driver
-    #     Checklist(driver).checklist()
+    def test_09_checklist(self):
+        driver = self.driver
+        Checklist(driver).checklist()
 
-    # def test_10_add_notes(self):
-    #     driver = self.driver
-    #     AddNotes(driver).add_notes()
-    #
-    # def test_11_add_further_info(self):
-    #     driver = self.driver
-    #     AddFurtherInfo(driver).add_further_info()
-    #
-    # def test_12_alternative_delivery_address(self):
-    #     driver = self.driver
-    #     AlternativeDeliveryAddress(driver).alternative_delivery_address()
+    def test_10_add_notes(self):
+        driver = self.driver
+        AddNotes(driver).add_notes()
+
+    def test_11_add_further_info(self):
+        driver = self.driver
+        AddFurtherInfo(driver).add_further_info()
+
+    def test_12_alternative_delivery_address(self):
+        driver = self.driver
+        AlternativeDeliveryAddress(driver).alternative_delivery_address()
 
     def test_13_company_tab(self):
         driver = self.driver
         CompanyTab(driver).company_tab()
 
-    # def test_14_pricing_tab(self):
-    #     driver = self.driver
-    #     PricingTab(driver).pricing_tab()
+    def test_14_pricing_tab(self):
+        driver = self.driver
+        PricingTab(driver).pricing_tab()
 
     def test_15_payment_tab(self):
         driver = self.driver
         PaymentInfoTab(driver).payment_info_tab()
 
-    # def test_16_commission_tab(self):
-    #     driver = self.driver
-    #     CommissionTab(driver).commission_tab()
+    def test_16_commission_tab(self):
+        driver = self.driver
+        CommissionTab(driver).commission_tab()
 
-    # def test_17_document_tab(self):
-    #     driver = self.driver
-    #     DocumentTab(driver).document_tab()
+    def test_17_document_tab(self):
+        driver = self.driver
+        DocumentTab(driver).document_tab()
 
     def test_18_product_config_tab(self):
         driver = self.driver
         ProductConfigTab(driver).product_config_tab()
 
-    # def test_19_online_portal_tab(self):
-    #     driver = self.driver
-    #     OnlinePortalTab(driver).online_portal_tab()
+    def test_19_online_portal_tab(self):
+        driver = self.driver
+        OnlinePortalTab(driver).online_portal_tab()
 
-    # def test_20_ftp_tab(self):
-    #     driver = self.driver
-    #     FTPTab(driver).ftp_tab()
+    def test_20_ftp_tab(self):
+        driver = self.driver
+        FTPTab(driver).ftp_tab()
 
     def test_21_add_task_from_3dots(self):
         driver = self.driver
@@ -153,7 +153,7 @@ class Contact_Module(unittest.TestCase):
         driver = self.driver
         AddAppointmentFromContactTab(driver).add_appointment_from_contact_tab()
 
-    # @pytest.mark.skip
+    @pytest.mark.skip
     def test_25_add_contact_from_contact_tab(self):
         driver = self.driver
         AddContactFromContactTab(driver).add_contact_from_contact_tab()
