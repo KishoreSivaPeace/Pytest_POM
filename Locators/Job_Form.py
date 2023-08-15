@@ -14,8 +14,8 @@ class Job_Form_Locators():
     add_product_button_id = "//*[@id='dropdownMenuLink']"
     add_product_search_id = "//*[@id='selectProductcustom']"
     add_product_id = "(//*[text()='Roller'])[1]"
-    room_id = "//*[text()='Room']/following::input[1]"
-    blind_recess_id = "//*[text()='Blind or Recess']/following::input[1]"
+    room_id = "//*[text()='Room ']/following::input[1]"
+    blind_recess_id = "//*[text()='Blind or Recess ']/following::input[1]"
     blind_option_id = "//*[text()='Blind']"
     width_id = "(//*[text()='Width'])[2]/following::input[1]"
     drop_id = "(//*[text()='Drop'])[2]/following::input[1]"
@@ -24,7 +24,8 @@ class Job_Form_Locators():
     fabric_id = "//*[contains(text(), 'Kaila')]"
     color_field_id = "//*[text()='Color']/following::input[1]"
     color_id = "//*[text()='Smoke']"
-    job_item_save_button_id = "//*[@id=\"sampleModal1\"]/div/div/div[2]/div/div[2]/div[2]/button[1]"
+    Further_Instruction_id = "//*[text()='Further Instructions']/following::input[1]"
+    job_item_save_button_id = "//*[@id='sampleModal1']/div/div/div[2]/div/div[2]/div[2]/button[1]"
 
     # Add Appointment ID's
     appointment_tab_id = "//*[@id='datessection']/mat-tab-header/div[2]/div/div/div[2]"

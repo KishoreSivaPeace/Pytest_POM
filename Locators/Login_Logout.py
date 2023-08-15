@@ -12,7 +12,7 @@ class Login_out_Locators():
                       "]/button[1]"
     company_name = "KISHORESIVADB"
     user_name = "Automation"
-    password = "1103"
+    password = "965577"
 
     # LogOut ID's
     profile_dropdown_id = "//*[@class='nav-head']/mat-toolbar-row/div/div[2]/a[3]/a"
